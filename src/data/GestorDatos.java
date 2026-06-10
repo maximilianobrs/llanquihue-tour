@@ -19,9 +19,9 @@ public class GestorDatos {
 
         try{
             File archivo = new File(rutaDatos);
-            Scanner lector = new Scanner(archivo);
-            while (lector.hasNextLine()){
-                String linea = lector.nextLine();
+            Scanner sc = new Scanner(archivo);
+            while (sc.hasNextLine()){
+                String linea = sc.nextLine();
 
                 String[] dato =linea.split(";");
 
@@ -36,7 +36,7 @@ public class GestorDatos {
 
             }
 
-            lector.close();
+            sc.close();
 
         } catch (Exception e) {
             System.out.println("Error al lear el archivo .txt de tours" + e.getMessage());

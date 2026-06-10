@@ -54,11 +54,10 @@ public class Tour {
 
     @Override
     public String toString() {
-        return "Tour{" +
-                "idUnico: " + getIdUnico() +
-                ", nombreTour: " + getNombreTour() +
-                ", tipoTour: " + getTipoTour() +
-                ", precio: " + getPrecio() +
-                '}' + "\n";
+        return
+                "ID: " + getIdUnico() +
+                " | Nombre: " + getNombreTour() +
+                " | tipo tour: " + getTipoTour() +
+                " | Precio: $" + getPrecio();
     }
 }

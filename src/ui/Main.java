@@ -16,19 +16,21 @@ public class Main {
         ArrayList<Tour> lista = GestorDatos.cargarTours("src/resources/tours.txt");
 
         System.out.println("\n==== TODOS LOS TOURS REGISTRADOS ====\n");
-        System.out.println(lista);
-
-        System.out.println("\n==== TOURS CON PRECIO MENOR A 40000 ====\n");
         for(Tour tour : lista){
-            if (tour.getPrecio() < 40000){
-                System.out.println("menor que 40000 ====> " + tour);
+                System.out.println(tour);
+        }
+
+        System.out.println("\n==== TOURS CON UN PRECIO MAYOR A $40.000 ====\n");
+        for(Tour tour : lista){
+            if (tour.getPrecio() > 40000){
+                System.out.println(tour);
             }
         }
 
         System.out.println("\n==== TOURS CULTURALES ====\n");
         for(Tour tour : lista){
             if (tour.getTipoTour().contains("Cultural")){
-                System.out.println("Tours culturales ====> " + tour);
+                System.out.println(tour);
             }
         }
     }
