@@ -13,9 +13,9 @@ public class Main {
         System.out.println(lista);
 
         System.out.println("\n==== TOURS CON PRECIO MENOR A 30000 ====\n");
-        for(Tour dato : lista){
-            if (dato.getPrecio() < 30000){
-                System.out.println("menor que 30000 ====> " + dato);
+        for(Tour tour : lista){
+            if (tour.getPrecio() < 30000){
+                System.out.println("menor que 30000 ====> " + tour);
             }
         }
     }

@@ -15,13 +15,13 @@ public class GestorDatos {
             while (lector.hasNextLine()){
                 String linea = lector.nextLine();
 
-                String[] partes =linea.split(";");
+                String[] dato =linea.split(";");
 
-                if (partes.length == 4){
-                    String idUnico = partes[0];
-                    String nombreTour = partes[1];
-                    String tipoTour = partes[2];
-                    int precio = Integer.parseInt(partes[3]);
+                if (dato.length == 4){
+                    String idUnico = dato[0];
+                    String nombreTour = dato[1];
+                    String tipoTour = dato[2];
+                    int precio = Integer.parseInt(dato[3]);
 
                     listaTours.add(new Tour(idUnico,nombreTour,tipoTour,precio));
                 }
@@ -31,7 +31,7 @@ public class GestorDatos {
             lector.close();
 
         } catch (Exception e) {
-            System.out.println("Error al lear el archivo de datos de tours" + e.getMessage());
+            System.out.println("Error al lear el archivo .txt de tours" + e.getMessage());
         }
         return listaTours;
     }
