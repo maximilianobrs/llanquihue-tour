@@ -1,0 +1,9 @@
+# Archivos compilados
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Carpeta de salida
+out/
