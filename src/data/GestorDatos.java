@@ -6,9 +6,17 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Clase encargada de gestionar la lectura de datos
+ * desde archivos de texto para crear objetos Tour.
+ * @author Maximiliano Briones Aguilera
+ */
+
 public class GestorDatos {
     public static ArrayList<Tour> cargarTours(String rutaDatos){
+
         ArrayList <Tour> listaTours = new ArrayList<>();
+
         try{
             File archivo = new File(rutaDatos);
             Scanner lector = new Scanner(archivo);

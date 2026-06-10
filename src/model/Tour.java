@@ -1,5 +1,12 @@
 package model;
 
+/**
+ * Clase que reprecentara un Tour de la agencia.
+ * Que tiene como atributos un id, nombre, tipo, precio.
+ * Como tambien contienes sus dos contructores como suss metodos tostring, getter y setter.
+ * @author Maximiliano
+ */
+
 public class Tour {
     private String idUnico,nombreTour,tipoTour;
     private int precio;
