@@ -1,7 +1,6 @@
 package data;
 
 import model.Tour;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -31,7 +30,13 @@ public class GestorDatos {
                     String tipoTour = dato[2];
                     int precio = Integer.parseInt(dato[3]);
 
-                    listaTours.add(new Tour(idUnico,nombreTour,tipoTour,precio));
+                    Tour tour = new Tour();
+                    tour.setIdUnico(idUnico);
+                    tour.setNombreTour(nombreTour);
+                    tour.setTipoTour(tipoTour);
+                    tour.setPrecio(precio);
+
+                    listaTours.add(tour);
                 }
 
             }
@@ -39,7 +44,7 @@ public class GestorDatos {
             sc.close();
 
         } catch (Exception e) {
-            System.out.println("Error al lear el archivo .txt de tours" + e.getMessage());
+            System.out.println("Error al leer el archivo .txt de tours: " + e.getMessage());
         }
         return listaTours;
     }
