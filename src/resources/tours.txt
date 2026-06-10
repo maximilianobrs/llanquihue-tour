@@ -1,0 +1,10 @@
+T001;Tour Lago Llanquihue;Naturaleza;35000
+T002;Recorrido Puerto Varas;Cultural;25000
+T003;Excursion Saltos del Petrohue;Naturaleza;40000
+T004;Ascenso Volcan Osorno;Aventura;70000
+T005;Ruta Gastronomica Frutillar;Gastronomico;30000
+T006;Tour Costanera Llanquihue;Cultural;20000
+T007;Navegacion Lago Todos los Santos;Naturaleza;55000
+T008;Trekking Parque Nacional Vicente Perez Rosales;Aventura;45000
+T009;Visita Teatro del Lago;Cultural;28000
+T010;Tour Fotograﬁco Llanquihue;Naturaleza;32000
