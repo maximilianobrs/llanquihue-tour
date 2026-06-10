@@ -8,35 +8,39 @@ import java.util.Scanner;
 /**
  * Clase encargada de gestionar la lectura de datos
  * desde archivos de texto para crear objetos Tour.
- * @author Maximiliano Briones Aguilera
+ *
+ * @author Maximiliano
  */
 
 public class GestorDatos {
-    public static ArrayList<Tour> cargarTours(String rutaDatos){
 
-        ArrayList <Tour> listaTours = new ArrayList<>();
+    /**
+     * Carga los tours desde un archivo de texto y los almacena
+     * en una colección ArrayList de objetos Tour.
+     *
+     * @param rutaDatos ruta del archivo .txt que contiene los datos
+     * @return lista de tours cargados desde el archivo
+     */
 
-        try{
+    public static ArrayList<Tour> cargarTours(String rutaDatos) {
+
+        ArrayList<Tour> listaTours = new ArrayList<>();
+
+        try {
             File archivo = new File(rutaDatos);
             Scanner sc = new Scanner(archivo);
-            while (sc.hasNextLine()){
+            while (sc.hasNextLine()) {
                 String linea = sc.nextLine();
 
-                String[] dato =linea.split(";");
+                String[] dato = linea.split(";");
 
-                if (dato.length == 4){
+                if (dato.length == 4) {
                     String idUnico = dato[0];
                     String nombreTour = dato[1];
                     String tipoTour = dato[2];
                     int precio = Integer.parseInt(dato[3]);
 
-                    Tour tour = new Tour();
-                    tour.setIdUnico(idUnico);
-                    tour.setNombreTour(nombreTour);
-                    tour.setTipoTour(tipoTour);
-                    tour.setPrecio(precio);
-
-                    listaTours.add(tour);
+                    listaTours.add(new Tour(idUnico, nombreTour, tipoTour, precio));
                 }
 
             }

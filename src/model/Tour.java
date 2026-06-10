@@ -54,8 +54,7 @@ public class Tour {
 
     @Override
     public String toString() {
-        return
-                "ID: " + getIdUnico() +
+        return  "ID: " + getIdUnico() +
                 " | Nombre: " + getNombreTour() +
                 " | tipo tour: " + getTipoTour() +
                 " | Precio: $" + getPrecio();
