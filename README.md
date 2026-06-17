@@ -1,4 +1,4 @@
-# ☕ Actividad Formativa 3 - Desarrollo Orientado a Objetos I
+# ☕ Evaluacion Semana 5 - Desarrollo Orientado a Objetos I
 
 ---------------------------------------------
 ## 👋 Autor del proyecto
@@ -12,7 +12,18 @@
 
 ## 📚 Descripción general del sistema
 
-Desarrollo de un sistema que permite organizar la información de los tours, cargando y organizando los datos según las preferencias del cliente desde un archivo .txt, almacenando la información de los tours como memoria temporal en una colección ArrayList mediante una clase modelo. También utiliza el método split() para procesar y separar los datos del archivo.
+Sistema desarrollado para la agencia “Llanquihue Tour”, el cual permite gestionar información de tours turísticos mediante lectura de archivos externos (.txt).
+
+Los datos son procesados y almacenados en estructuras dinámicas (ArrayList), aplicando principios de Programación Orientada a Objetos como encapsulación, composición y separación por capas.
+
+El sistema está organizado en capas:
+- model: clases de dominio (Tour, Guia)
+- data: lectura de archivos
+- service: lógica de negocio
+- util: validaciones
+- ui: interacción con el usuario
+- app: punto de entrada del sistema
+
 
 -------------------------------------------
 ## 📁 Estructura del proyecto
@@ -20,15 +31,21 @@ Desarrollo de un sistema que permite organizar la información de los tours, car
 ```bash
 llanquihue-tour/
 ├── src/
+│   ├── app/
+│   │   └── Main.java
+│   ├── ui/
+│   │   └── TourUI.java
+│   ├── service/
+│   │   └── AgenciaService.java
 │   ├── data/
-│   │    └── GestorDatos.java
+│   │   └── GestorDatos.java
 │   ├── model/
-│   │     └── Tour.java
-│   ├── resources/
-│   │     └── tours.txt
-│   └── ui/
-│         └── Menu.java
-├── .gitignore
+│   │   ├── Tour.java
+│   │   └── Guia.java
+│   └── util/
+│       └── ValidadorUtil.java
+├── resources/
+│   └── tours.txt
 └── README.md
 ```
 --------------------------
