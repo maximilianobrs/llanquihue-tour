@@ -1,23 +1,24 @@
 package model;
 
 /**
- * Clase que reprecentara un Tour de la agencia.
- * Que tiene como atributos un id, nombre, tipo, precio.
- * Como tambien contienes sus dos contructores como suss metodos tostring, getter y setter.
+ * Representa un tour turístico de la agencia Llanquihue Tour.
+ * Contiene información del tour y su guía asociado.
  * @author Maximiliano
  */
 
 public class Tour {
     private String idUnico,nombreTour,tipoTour;
     private int precio;
+    private Guia guia;
 
     public Tour(){}
 
-    public Tour(String idUnico, String nombreTour, String tipoTour, int precio) {
+    public Tour(String idUnico, String nombreTour, String tipoTour, int precio, Guia guia) {
         this.idUnico = idUnico;
         this.nombreTour = nombreTour;
         this.tipoTour = tipoTour;
         this.precio = precio;
+        this.guia = guia;
     }
 
     public String getIdUnico() {
@@ -52,11 +53,20 @@ public class Tour {
         this.precio = precio;
     }
 
+    public Guia getGuia() {
+        return guia;
+    }
+
+    public void setGuia(Guia guia) {
+        this.guia = guia;
+    }
+
     @Override
     public String toString() {
         return  "ID: " + getIdUnico() +
-                " | Nombre: " + getNombreTour() +
-                " | tipo tour: " + getTipoTour() +
-                " | Precio: $" + getPrecio();
+                " | Nombre ruta: " + getNombreTour() +
+                " | Tipo tour: " + getTipoTour() +
+                " | Precio: $" + getPrecio() +
+                " | " + getGuia();
     }
 }

@@ -27,7 +27,7 @@ llanquihue-tour/
 │   ├── resources/
 │   │     └── tours.txt
 │   └── ui/
-│         └── Main.java
+│         └── Menu.java
 ├── .gitignore
 └── README.md
 ```
