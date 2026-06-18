@@ -1,9 +1,6 @@
 package app;
-import model.Tour;
-import data.GestorDatos;
 import service.AgenciaService;
 import ui.TourUI;
-import java.util.ArrayList;
 
 /**
  * Clase principal del sistema Llanquihue Tour.
@@ -18,11 +15,10 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Tour> tours = GestorDatos.cargarTours("resources/tours.txt");
+        AgenciaService agencia = new AgenciaService();
+        agencia.cargarDatos(); //inicia la lectura del gestor de datos
 
-        AgenciaService service = new AgenciaService(tours);
-
-        TourUI ui = new TourUI(service);
-        ui.mostrar();
+        TourUI ui = new TourUI(agencia);
+        ui.mostrar(); // Muestra la información de los tours por consola
     }
 }

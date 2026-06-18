@@ -2,11 +2,12 @@ package ui;
 import service.AgenciaService;
 
 /**
- * Clase encargada de la interfaz de usuario del sistema.
- * - Mostrar información al usuario
- * - Solicitar datos de entrada (si aplica)
- * - Invocar los servicios de negocio (AgenciaService)
+ * Clase encargada de presentar la información por consola.
+ * Invoca los servicios de negocio y muestra los resultados.
+ *
+ * @author Maximiliano
  */
+
 public class TourUI {
 
     private AgenciaService service;

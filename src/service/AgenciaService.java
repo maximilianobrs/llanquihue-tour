@@ -1,5 +1,6 @@
 package service;
 
+import data.GestorDatos;
 import model.Tour;
 import java.util.ArrayList;
 
@@ -13,8 +14,8 @@ public class AgenciaService {
 
     private ArrayList<Tour> tours;
 
-    public AgenciaService(ArrayList<Tour> tours) {
-        this.tours = tours;
+    public void cargarDatos() {
+        tours = GestorDatos.cargarTours("resources/tours.txt");
     }
 
     // Mostrar todos los tours
