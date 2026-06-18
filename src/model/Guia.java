@@ -35,6 +35,6 @@ public class Guia {
 
     @Override
     public String toString() {
-        return "Guia: { " + "Nombre: " + nombre + " | " + "Tipo: " + tipo + " }";
+        return "Guia: { " + "Nombre: " + getNombre() + " | " + "Tipo: " + getTipo() + " }";
     }
 }

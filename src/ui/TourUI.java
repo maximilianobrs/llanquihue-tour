@@ -18,8 +18,8 @@ public class TourUI {
 
     public void mostrar() {
         service.listarTours();
-        service.toursCaros(40000);
-        service.toursPorTipo("Naturaleza");
+        service.mostrarToursDesde(30000);
+        service.toursPorTipo("Cultural");
     }
 
 }

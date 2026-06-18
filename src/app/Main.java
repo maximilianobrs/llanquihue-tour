@@ -4,10 +4,11 @@ import ui.TourUI;
 
 /**
  * Clase principal del sistema Llanquihue Tour.
- * Es el punto de entrada de la aplicación.
- * - Cargar los datos desde archivos externos
- * - Inicializar los servicios del sistema
- * - Iniciar la interfaz de usuario (UI)
+ * Actúa como punto de entrada de la aplicación.
+ * Se encarga de:
+ * - Crear e inicializar los componentes principales del sistema.
+ * - Instanciar el servicio de gestión de tours.
+ * - Iniciar la interfaz de usuario.
  *
  * @author Maximiliano
  */
@@ -18,6 +19,7 @@ public class Main {
         // Se crea el servicio y se cargan los datos desde el archivo
         AgenciaService agencia = new AgenciaService();
 
+        // Se crea la interfaz de usuario y se le entrega el servicio
         TourUI ui = new TourUI(agencia);
 
         // Muestra la información de los tours por consola

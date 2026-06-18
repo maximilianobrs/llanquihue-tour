@@ -54,11 +54,11 @@ public class GestorDatos {
                             !Validador.textoValido(dato[4]) ||
                             !Validador.textoValido(dato[5]))
                     {
-                        System.out.println("Dato ignorado: Faltan campos de texto obligatorios en la línea: \" + linea");
+                        System.out.println("Dato ignorado: Faltan campos de texto obligatorios en la línea: " + linea);
                         continue;
                     }
 
-                    //validando que el precio sea un numero positivo
+                    //validando que el precio sea un numero positivo mayor a cero.
                     if (!Validador.esPositivo(precio)) {
                         System.out.println("\nDato ignorado: precio debe ser mayor a cero -> " + precio);
                         continue;

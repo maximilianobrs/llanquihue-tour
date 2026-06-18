@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class AgenciaService {
 
-    private ArrayList<Tour> tours;
+    private final ArrayList<Tour> tours;
 
     /**
      * Al crear la agencia, se leen los paseos desde el archivo de texto.
@@ -25,6 +25,12 @@ public class AgenciaService {
      * Muestra en la pantalla todos los tours guardados.
      */
     public void listarTours() {
+        if (tours == null || tours.isEmpty()) {
+            System.out.println("\n==== SIN RESULTADOS DE TOURS ====");
+            System.out.println("No hay tours cargados en el sistema.");
+            return;
+        }
+
         System.out.println("\n==== TODOS LOS TOURS REGISTRADOS ====\n");
 
         for (Tour tour : tours) {
@@ -33,17 +39,32 @@ public class AgenciaService {
     }
 
     /**
-     * Muestra solo los paseos que cuesten más que el precio ingresado.
+     * Muestra solo los paseos que cuesten más o igual que el precio ingresado.
      * @param precio costo mínimo a buscar.
      */
-    public void toursCaros(int precio) {
-        System.out.println("\n==== TOURS CON PRECIO MAYOR A $" + precio + " ====\n");
+    public void mostrarToursDesde(int precio) {
+
+        if (tours == null || tours.isEmpty()) {
+            System.out.println("\n==== SIN RESULTADOS ====");
+            System.out.println("No hay tours cargados en el sistema.");
+            return;
+        }
+
+        boolean encontrado = false;
+
+        System.out.println("\n==== TOURS CON PRECIO MAYOR O IGUAL $" + precio + " ====\n");
 
         for (Tour tour : tours) {
-            if (tour.getPrecio() > precio) {
+            if (tour.getPrecio() >= precio) {
                 System.out.println(tour);
+                encontrado = true;
             }
         }
+
+        if (!encontrado) {
+            System.out.println("No se encontraron tours con precio mayor a: $" + precio);
+        }
+
     }
 
     /**
@@ -51,12 +72,26 @@ public class AgenciaService {
      * @param tipo categoría del paseo Naturaleza o Aventura etc.
      */
     public void toursPorTipo(String tipo) {
+
+        if (tours == null || tours.isEmpty()) {
+            System.out.println("\n==== SIN RESULTADOS ====");
+            System.out.println("No hay tours cargados.");
+            return;
+        }
+
         System.out.println("\n==== TOURS " + tipo + " ====\n");
+
+        boolean encontrado = false;
 
         for (Tour tour : tours) {
             if (tour.getTipoTour().equalsIgnoreCase(tipo)) {
                 System.out.println(tour);
+                encontrado = true;
             }
+        }
+
+        if (!encontrado) {
+            System.out.println("No se encontraron tours del tipo: " + tipo);
         }
     }
 }
