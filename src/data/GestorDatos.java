@@ -2,7 +2,7 @@ package data;
 
 import model.Tour;
 import model.Guia;
-import util.ValidadorUtil;
+import util.Validador;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -37,7 +37,7 @@ public class GestorDatos {
                 String[] dato = linea.split(";");
 
                 if (dato.length != 6) {
-                    System.out.println("Línea inválida: " + linea);
+                    System.out.println("\nLínea inválida: " + linea);
                     continue;
                 }
 
@@ -47,10 +47,23 @@ public class GestorDatos {
                     String tipoTour = dato[2];
                     int precio = Integer.parseInt(dato[3]);
 
-                    if (!ValidadorUtil.numero(precio)) {
-                        System.out.println("\nDato ignorado: precio inválido -> " + precio);
+                    //validando que cada campo no este vacio
+                    if (!Validador.textoValido(idUnico) ||
+                            !Validador.textoValido(nombreTour) ||
+                            !Validador.textoValido(tipoTour) ||
+                            !Validador.textoValido(dato[4]) ||
+                            !Validador.textoValido(dato[5]))
+                    {
+                        System.out.println("Dato ignorado: Faltan campos de texto obligatorios en la línea: \" + linea");
                         continue;
                     }
+
+                    //validando que el precio sea un numero positivo
+                    if (!Validador.esPositivo(precio)) {
+                        System.out.println("\nDato ignorado: precio debe ser mayor a cero -> " + precio);
+                        continue;
+                    }
+
 
                     Guia guia = new Guia (dato[4],dato[5]);
 

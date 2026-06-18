@@ -19,7 +19,7 @@ public class TourUI {
     public void mostrar() {
         service.listarTours();
         service.toursCaros(40000);
-        service.toursPorTipo("Cultural");
+        service.toursPorTipo("Naturaleza");
     }
 
 }

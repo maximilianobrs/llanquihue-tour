@@ -14,11 +14,16 @@ public class AgenciaService {
 
     private ArrayList<Tour> tours;
 
-    public void cargarDatos() {
+    /**
+     * Al crear la agencia, se leen los paseos desde el archivo de texto.
+     */
+    public AgenciaService() {
         tours = GestorDatos.cargarTours("resources/tours.txt");
     }
 
-    // Mostrar todos los tours
+    /**
+     * Muestra en la pantalla todos los tours guardados.
+     */
     public void listarTours() {
         System.out.println("\n==== TODOS LOS TOURS REGISTRADOS ====\n");
 
@@ -27,7 +32,10 @@ public class AgenciaService {
         }
     }
 
-    // Filtrar por precio
+    /**
+     * Muestra solo los paseos que cuesten más que el precio ingresado.
+     * @param precio costo mínimo a buscar.
+     */
     public void toursCaros(int precio) {
         System.out.println("\n==== TOURS CON PRECIO MAYOR A $" + precio + " ====\n");
 
@@ -38,7 +46,10 @@ public class AgenciaService {
         }
     }
 
-    // Filtrar por tipo
+    /**
+     * Muestra solo los paseos que coincidan con la categoría buscada.
+     * @param tipo categoría del paseo Naturaleza o Aventura etc.
+     */
     public void toursPorTipo(String tipo) {
         System.out.println("\n==== TOURS " + tipo + " ====\n");
 

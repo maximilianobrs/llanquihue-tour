@@ -15,10 +15,12 @@ import ui.TourUI;
 public class Main {
     public static void main(String[] args) {
 
+        // Se crea el servicio y se cargan los datos desde el archivo
         AgenciaService agencia = new AgenciaService();
-        agencia.cargarDatos(); //inicia la lectura del gestor de datos
 
         TourUI ui = new TourUI(agencia);
-        ui.mostrar(); // Muestra la información de los tours por consola
+
+        // Muestra la información de los tours por consola
+        ui.mostrar();
     }
 }

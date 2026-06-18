@@ -3,7 +3,7 @@ T002;Recorrido Puerto Varas;Cultural;25000;Maria Soto;Intermedio
 T003;Excursion Saltos del Petrohue;Naturaleza;40000;Carlos Diaz;Avanzado
 T004;Ascenso Volcan Osorno;Aventura;70000;Pedro Gonzalez;Experto
 T005;Ruta Gastronomica Frutillar;Gastronomico;30000;Ana Lopez;Intermedio
-T006;Tour Costanera Llanquihue;Cultural;2000a;Luis Ramirez;Basico
+T006;Tour Costanera Llanquihue;Cultural;20000;Luis Ramirez;Basico
 T007;Navegacion Lago Todos los Santos;Naturaleza;55000;Sofia Perez;Avanzado
 T008;Trekking Parque Nacional Vicente Perez Rosales;Aventura;45000;Diego Torres;Experto
 T009;Visita Teatro del Lago;Cultural;28000;Fernanda Rios;Intermedio
